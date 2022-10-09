@@ -53,7 +53,6 @@ public class Startup extends BroadcastReceiver {
         restore(OTGModeSwitch.getFile(), enabled);
                }
         AdrenoBoostPreference.restore(context);
-        DeviceExtras.restoreSliderStates(context);
         org.zephyrus.device.DeviceExtras.doze.DozeUtils.checkDozeService(context);
         VibratorStrengthPreference.restore(context);
     }
