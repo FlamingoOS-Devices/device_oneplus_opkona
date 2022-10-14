@@ -160,9 +160,6 @@ PRODUCT_PACKAGES += \
     libcamera2ndk_vendor \
     libstdc++.vendor
 
-PRODUCT_PACKAGES += \
-    Camera2
-
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
     frameworks/native/data/etc/android.hardware.camera.front.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.front.xml \
@@ -274,11 +271,6 @@ PRODUCT_PACKAGES += \
     libhidltransport.vendor \
     libhwbinder \
     libhwbinder.vendor
-
-# IPACM
-PRODUCT_PACKAGES += \
-    ipacm \
-    IPACM_cfg.xml
 
 # Keymaster
 PRODUCT_PACKAGES += \
@@ -437,7 +429,6 @@ PRODUCT_PACKAGES += \
 
 # QMI
 PRODUCT_PACKAGES += \
-    libjson \
     libqti_vndfwk_detect \
     libqti_vndfwk_detect.vendor \
     libvndfwk_detect_jni.qti \
@@ -448,6 +439,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     bt \
     overlay \
     perf \
+    telephony \
     usb
 
 # RIL
@@ -457,9 +449,7 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0.vendor
 
 PRODUCT_PACKAGES += \
-    libprotobuf-cpp-full \
-    librmnetctl \
-    libxml2
+    libprotobuf-cpp-full
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -515,9 +505,6 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Telephony
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.cdma.xml \
-    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
-    frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml
     
 # Touch
