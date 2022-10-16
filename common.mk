@@ -102,7 +102,6 @@ PRODUCT_PACKAGES += \
     libsndmonitor \
     libspkrprot \
     libssrec \
-    libtinycompress \
     libvisualizer \
     libvolumelistener
 
