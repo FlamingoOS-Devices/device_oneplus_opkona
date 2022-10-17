@@ -44,8 +44,8 @@ enum class Gesture(
     SINGLE_TAP(262, R.string.touchscreen_gesture_single_tap_title),
     SWIPE_UP(257, R.string.touchscreen_gesture_swipe_up_title),
     SWIPE_DOWN(256, R.string.touchscreen_gesture_swipe_down_title),
-    SWIPE_LEFT(255, R.string.touchscreen_gesture_swipe_left_title),
-    SWIPE_RIGHT(254, R.string.touchscreen_gesture_swipe_right_title),
+    SWIPE_LEFT(254, R.string.touchscreen_gesture_swipe_left_title),
+    SWIPE_RIGHT(255, R.string.touchscreen_gesture_swipe_right_title),
 }
 
 val ScanCodes = Gesture.values().map { it.scanCode }.toIntArray()
