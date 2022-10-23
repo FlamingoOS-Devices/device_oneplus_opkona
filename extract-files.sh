@@ -6,7 +6,18 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+#!/bin/bash
+#
+# Copyright (C) 2016 The CyanogenMod Project
+# Copyright (C) 2017-2020 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
 set -e
+
+DEVICE=opkona
+VENDOR=oneplus
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -21,24 +32,19 @@ if [ ! -f "${HELPER}" ]; then
 fi
 source "${HELPER}"
 
-# Default to sanitizing the vendor folder before extraction
-CLEAN_VENDOR=true
+# Default to not sanitizing the vendor folder before extraction
+CLEAN_VENDOR=false
 
-ONLY_COMMON=
-ONLY_TARGET=
+# Proprietary files list
+DEVICE_NAME="Common"
+
 KANG=
 SECTION=
 
 while [ "${#}" -gt 0 ]; do
     case "${1}" in
-        --only-common )
-                ONLY_COMMON=true
-                ;;
-        --only-target )
-                ONLY_TARGET=true
-                ;;
-        -n | --no-cleanup )
-                CLEAN_VENDOR=false
+        -c | --cleanup )
+                CLEAN_VENDOR=true
                 ;;
         -k | --kang )
                 KANG="--kang"
@@ -46,6 +52,9 @@ while [ "${#}" -gt 0 ]; do
         -s | --section )
                 SECTION="${2}"; shift
                 CLEAN_VENDOR=false
+                ;;
+        -d | --device )
+                DEVICE_NAME="${2}"; shift
                 ;;
         * )
                 SRC="${1}"
@@ -93,19 +102,15 @@ function blob_fixup() {
     esac
 }
 
-if [ -z "${ONLY_TARGET}" ]; then
-    # Initialize the helper for common device
-    setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${ANDROID_ROOT}" true "${CLEAN_VENDOR}"
+# Initialize the helper
+setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
 
+if [ "${DEVICE_NAME}" = "Common" ]; then
     extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
-fi
-
-if [ -z "${ONLY_COMMON}" ] && [ -s "${MY_DIR}/../${DEVICE}/proprietary-files.txt" ]; then
-    # Reinitialize the helper for device
-    source "${MY_DIR}/../${DEVICE}/extract-files.sh"
-    setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
-
-    extract "${MY_DIR}/../${DEVICE}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
+elif [ "${DEVICE_NAME}" = "instantnoodle" ]; then
+    extract "${MY_DIR}/proprietary-files-instantnoodle.txt" "${SRC}" "${KANG}" --section "${SECTION}"
+elif [ "${DEVICE_NAME}" = "instantnoodlep" ]; then
+    extract "${MY_DIR}/proprietary-files-instantnoodlep.txt" "${SRC}" "${KANG}" --section "${SECTION}"
 fi
 
 "${MY_DIR}/setup-makefiles.sh"

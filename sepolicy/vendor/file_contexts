@@ -90,3 +90,11 @@
 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/measured_fps         u:object_r:sysfs_dm:s0
 /sys/devices/platform/soc/a8c000.i2c/i2c-6/6-005a/leds/vibrator/level                     u:object_r:sysfs_vibrator:s0
 /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost                                              u:object_r:vendor_sysfs_kgsl:s0
+
+# OP8/8P
+/(odm|vendor/odm)/op8/etc(/.*)?                          u:object_r:vendor_configs_file:s0
+/(vendor|system/vendor)/op8/etc(/.*)?                    u:object_r:vendor_configs_file:s0
+/(odm|vendor/odm)/op8/lib(64)?/camera                    u:object_r:vendor_hal_file:s0
+/(odm|vendor/odm)/op8p/etc(/.*)?                         u:object_r:vendor_configs_file:s0
+/(vendor|system/vendor)/op8p/etc(/.*)?                   u:object_r:vendor_configs_file:s0
+/(odm|vendor/odm)/op8p/lib(64)?/camera                   u:object_r:vendor_hal_file:s0

@@ -21,7 +21,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Inherit proprietary libraries
-$(call inherit-product, vendor/oneplus/sm8250-common/sm8250-common-vendor.mk)
+$(call inherit-product, vendor/oneplus/opkona/opkona-vendor.mk)
+
+# Enable virtual A/B OTA
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
     
 # OTA
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
@@ -113,6 +116,8 @@ PRODUCT_COPY_FILES += \
     $(AUDIO_HAL_DIR)/configs/kona/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
     $(AUDIO_HAL_DIR)/configs/kona/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     $(AUDIO_HAL_DIR)/configs/kona/audio_tuning_mixer.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer.txt \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/op8,$(TARGET_COPY_OUT_VENDOR)/op8/etc) \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/op8p,$(TARGET_COPY_OUT_VENDOR)/op8p/etc) \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
 PRODUCT_COPY_FILES += \
@@ -263,6 +268,9 @@ PRODUCT_PACKAGES += \
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
+    
+# Make it official
+OFFICIAL_BUILD := true
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -398,11 +406,27 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_PACKAGES += \
+    AlertSliderOverlay \
+    OP8AlertSliderOverlay \
+    OP8PAlertSliderOverlay \
+    OplusBrightnessOverlay \
+    OnePlus8TPowerProfileOverlay \
+    OnePlus8FrameworkRes \
+    OnePlus8ProFrameworkRes \
+    OnePlus8TWifiOverlay \
+    OnePlus8WifiOverlay \
+    OnePlus8ProWifiOverlay \
+    OnePlus8SettingsProviderOverlay \
+    OnePlus8ProSettingsProviderOverlay \
+    OnePlus8TSettingsProviderOverlay \
+    OnePlus8ProSystemUIOverlay \
     SettingsOverlayRefreshRate \
-    TetheringConfigOverlay \
     OplusColorModes \
     OplusSettingsColorModes \
     OplusWifiResCommon
+
+# API Level
+PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Partition
 PRODUCT_BUILD_SUPER_PARTITION := false
@@ -448,6 +472,7 @@ PRODUCT_PACKAGES += \
     init.qcom.sh
 
 PRODUCT_PACKAGES += \
+    fstab.qcom \
     init.oppo.display.rc \
     init.oplus.charging.rc \
     init.oplus.usb.rc \
@@ -455,6 +480,7 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.recovery.qcom.rc \
     init.target.rc \
+    init_overlayfs.rc \
     ueventd.qcom.rc
 
 # RenderScript

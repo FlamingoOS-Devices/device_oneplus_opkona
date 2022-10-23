@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "OnePlus8TWifiOverlay",
+    device_specific: true,
+}

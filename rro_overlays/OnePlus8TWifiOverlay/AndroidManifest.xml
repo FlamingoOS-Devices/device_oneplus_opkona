@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2022 The Nameless-AOSP Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    coreApp="true"
+    package="com.android.wifi.resources.overlay.oneplus8t">
+    <overlay
+        android:isStatic="true"
+        android:priority="715"
+        android:requiredSystemPropertyName="ro.product.vendor.device"
+        android:requiredSystemPropertyValue="OnePlus8T"
+        android:targetName="WifiCustomization"
+        android:targetPackage="com.android.wifi.resources" />
+</manifest>
