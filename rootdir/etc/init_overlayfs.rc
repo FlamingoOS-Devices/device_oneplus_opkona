@@ -1,0 +1,27 @@
+on fs && property:ro.boot.prj_version=19821
+    mount overlay overlay /odm/firmware lowerdir=/odm/op8/firmware:/odm/firmware
+    mount overlay overlay /odm/lib64/camera lowerdir=/odm/op8/lib64/camera:/odm/lib64/camera
+    mount overlay overlay /odm/vendor/firmware lowerdir=/odm/op8/vendor/firmware:/odm/vendor/firmware
+    mount overlay overlay /vendor/etc lowerdir=/vendor/op8/etc:/vendor/etc
+    mount overlay overlay /odm/etc lowerdir=/odm/op8/etc:/odm/etc
+
+on fs && property:ro.boot.prj_version=19855                                         
+    mount overlay overlay /odm/firmware lowerdir=/odm/op8/firmware:/odm/firmware
+    mount overlay overlay /odm/lib64/camera lowerdir=/odm/op8/lib64/camera:/odm/lib64/camera
+    mount overlay overlay /odm/vendor/firmware lowerdir=/odm/op8/vendor/firmware:/odm/vendor/firmware
+    mount overlay overlay /vendor/etc lowerdir=/vendor/op8/etc:/vendor/etc
+    mount overlay overlay /odm/etc lowerdir=/odm/op8/etc:/odm/etc
+
+on fs && property:ro.boot.prj_version=19867                                         
+    mount overlay overlay /odm/firmware lowerdir=/odm/op8/firmware:/odm/firmware
+    mount overlay overlay /odm/lib64/camera lowerdir=/odm/op8/lib64/camera:/odm/lib64/camera
+    mount overlay overlay /odm/vendor/firmware lowerdir=/odm/op8/vendor/firmware:/odm/vendor/firmware
+    mount overlay overlay /vendor/etc lowerdir=/vendor/op8/etc:/vendor/etc
+    mount overlay overlay /odm/etc lowerdir=/odm/op8/etc:/odm/etc
+
+on fs && property:ro.boot.prj_version=19811                                         
+    mount overlay overlay /odm/firmware lowerdir=/odm/op8p/firmware:/odm/firmware
+    mount overlay overlay /odm/lib64/camera lowerdir=/odm/op8p/lib64/camera:/odm/lib64/camera
+    mount overlay overlay /odm/vendor/firmware lowerdir=/odm/op8p/vendor/firmware:/odm/vendor/firmware
+    mount overlay overlay /vendor/etc lowerdir=/vendor/op8p/etc:/vendor/etc
+    mount overlay overlay /odm/etc lowerdir=/odm/op8p/etc:/odm/etc
