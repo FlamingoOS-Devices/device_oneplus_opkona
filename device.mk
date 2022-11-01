@@ -419,6 +419,7 @@ PRODUCT_PACKAGES += \
     OnePlus8SettingsProviderOverlay \
     OnePlus8ProSettingsProviderOverlay \
     OnePlus8TSettingsProviderOverlay \
+    OnePlus8SystemUIOverlay \
     OnePlus8ProSystemUIOverlay \
     SettingsOverlayRefreshRate \
     OplusColorModes \
