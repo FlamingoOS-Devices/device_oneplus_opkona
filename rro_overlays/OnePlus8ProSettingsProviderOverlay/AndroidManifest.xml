@@ -4,11 +4,11 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.providers.settings.overlay.oplus.oneplus8t">
+    package="com.android.providers.settings.overlay.oplus.oneplus8p">
     <overlay
         android:isStatic="true"
         android:priority="354"
-        android:requiredSystemPropertyName="ro.product.vendor.device"
-        android:requiredSystemPropertyValue="OnePlus8Pro"
+        android:requiredSystemPropertyName="ro.overlay.device"
+        android:requiredSystemPropertyValue="instantnoodlep"
         android:targetPackage="com.android.providers.settings" />
 </manifest>
