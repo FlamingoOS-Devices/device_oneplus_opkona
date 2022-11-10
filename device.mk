@@ -407,24 +407,34 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_PACKAGES += \
     AlertSliderOverlay \
-    OP8AlertSliderOverlay \
-    OP8PAlertSliderOverlay \
+    OnePlus9RWifiOverlay \
     OplusBrightnessOverlay \
-    OnePlus8TPowerProfileOverlay \
-    OnePlus8FrameworkRes \
-    OnePlus8ProFrameworkRes \
-    OnePlus8TWifiOverlay \
-    OnePlus8WifiOverlay \
-    OnePlus8ProWifiOverlay \
-    OnePlus8SettingsProviderOverlay \
-    OnePlus8ProSettingsProviderOverlay \
-    OnePlus8TSettingsProviderOverlay \
-    OnePlus8SystemUIOverlay \
-    OnePlus8ProSystemUIOverlay \
     SettingsOverlayRefreshRate \
     OplusColorModes \
     OplusSettingsColorModes \
     OplusWifiResCommon
+    
+# Overlays - OP8
+PRODUCT_PACKAGES += \
+    OP8AlertSliderOverlay \
+    OnePlus8FrameworkRes \
+    OnePlus8WifiOverlay \
+    OnePlus8SettingsProviderOverlay \
+    OnePlus8SystemUIOverlay
+    
+# Overlays - OP8P
+PRODUCT_PACKAGES += \
+    OP8PAlertSliderOverlay \
+    OnePlus8ProFrameworkRes \
+    OnePlus8ProWifiOverlay \
+    OnePlus8ProSettingsProviderOverlay \
+    OnePlus8ProSystemUIOverlay
+    
+# Overlays - OP8T
+PRODUCT_PACKAGES += \
+    OnePlus8TPowerProfileOverlay \
+    OnePlus8TWifiOverlay \
+    OnePlus8TSettingsProviderOverlay
 
 # API Level
 PRODUCT_SHIPPING_API_LEVEL := 30
