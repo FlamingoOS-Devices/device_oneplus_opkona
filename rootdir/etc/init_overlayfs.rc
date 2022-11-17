@@ -25,3 +25,19 @@ on fs && property:ro.boot.prj_version=19811
     mount overlay overlay /odm/vendor/firmware lowerdir=/odm/op8p/vendor/firmware:/odm/vendor/firmware
     mount overlay overlay /vendor/etc lowerdir=/vendor/op8p/etc:/vendor/etc
     mount overlay overlay /odm/etc lowerdir=/odm/op8p/etc:/odm/etc
+    
+on fs && property:ro.boot.prj_version=20828                                         
+    mount overlay overlay /odm/etc/camera lowerdir=/odm/9r/etc/camera:/odm/etc/camera
+    mount overlay overlay /odm/lib64/camera lowerdir=/odm/9r/lib64/camera:/odm/lib64/camera
+
+on fs && property:ro.boot.prj_version=19805                                         
+    mount overlay overlay /odm/etc/camera lowerdir=/odm/9r/etc/camera:/odm/etc/camera
+    mount overlay overlay /odm/lib64/camera lowerdir=/odm/9r/lib64/camera:/odm/lib64/camera
+
+on fs && property:ro.boot.prj_version=20809                                         
+    mount overlay overlay /odm/etc/camera lowerdir=/odm/9r/etc/camera:/odm/etc/camera
+    mount overlay overlay /odm/lib64/camera lowerdir=/odm/9r/lib64/camera:/odm/lib64/camera
+
+on fs && property:ro.boot.prj_version=20838                                         
+    mount overlay overlay /odm/etc/camera lowerdir=/odm/9r/etc/camera:/odm/etc/camera
+    mount overlay overlay /odm/lib64/camera lowerdir=/odm/9r/lib64/camera:/odm/lib64/camera

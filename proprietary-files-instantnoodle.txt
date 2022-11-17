@@ -26,18 +26,18 @@ odm/etc/camera/distortion_result.bin:odm/op8/etc/camera/distortion_result.bin
 odm/lib64/camera/components/com.qti.stats.pdlib.so:odm/op8/lib64/camera/components/com.qti.stats.pdlib.so
 odm/lib64/camera/components/libipebpsstriping.so:odm/op8/lib64/camera/components/libipebpsstriping.so
 odm/lib64/camera/com.qti.sensormodule.ofilm_imx481.bin:odm/op8/lib64/camera/com.qti.sensormodule.ofilm_imx481.bin
-odm/lib64/camera/com.qti.sensormodule.ofilm_imx481_SFK.bin
+odm/lib64/camera/com.qti.sensormodule.ofilm_imx481_SFK.bin:odm/op8/lib64/camera/com.qti.sensormodule.ofilm_imx481_SFK.bin
 odm/lib64/camera/com.qti.sensormodule.semco_imx586.bin:odm/op8/lib64/camera/com.qti.sensormodule.semco_imx586.bin
-odm/lib64/camera/com.qti.sensormodule.shine_gc2375.bin
+odm/lib64/camera/com.qti.sensormodule.shine_gc2375.bin:odm/op8/lib64/camera/com.qti.sensormodule.shine_gc2375.bin
 odm/lib64/camera/com.qti.sensormodule.truly_imx471.bin:odm/op8/lib64/camera/com.qti.sensormodule.truly_imx471.bin
 odm/lib64/camera/com.qti.tuned.ofilm_imx481.bin:odm/op8/lib64/camera/com.qti.tuned.ofilm_imx481.bin
 odm/lib64/camera/com.qti.tuned.semco_imx586.bin:odm/op8/lib64/camera/com.qti.tuned.semco_imx586.bin
-odm/lib64/camera/com.qti.tuned.shine_gc2375.bin
+odm/lib64/camera/com.qti.tuned.shine_gc2375.bin:odm/op8/lib64/camera/com.qti.tuned.shine_gc2375.bin
 odm/lib64/camera/com.qti.tuned.truly_imx471.bin:odm/op8/lib64/camera/com.qti.tuned.truly_imx471.bin
-odm/lib64/camera/com.qti_instantnoodle.sensor.gc2375.so
-odm/lib64/camera/com.qti_instantnoodle.sensor.imx471.so
-odm/lib64/camera/com.qti_instantnoodle.sensor.imx481.so
-odm/lib64/camera/com.qti_instantnoodle.sensor.imx586.so
+odm/lib64/camera/com.qti_instantnoodle.sensor.gc2375.so:odm/op8/lib64/camera/com.qti_instantnoodle.sensor.gc2375.so
+odm/lib64/camera/com.qti_instantnoodle.sensor.imx471.so:odm/op8/lib64/camera/com.qti_instantnoodle.sensor.imx471.so
+odm/lib64/camera/com.qti_instantnoodle.sensor.imx481.so:odm/op8/lib64/camera/com.qti_instantnoodle.sensor.imx481.so
+odm/lib64/camera/com.qti_instantnoodle.sensor.imx586.so:odm/op8/lib64/camera/com.qti_instantnoodle.sensor.imx586.so
 
 # Fingerprint
 odm/vendor/firmware/gfp9608.b00:odm/op8/vendor/firmware/gfp9608.b00
