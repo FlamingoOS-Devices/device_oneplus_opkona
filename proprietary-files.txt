@@ -267,31 +267,31 @@ vendor/lib64/vendor.oplus.hardware.cammidasservice@1.0.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so|8ddd7248fffd3906842d61c387072017a7a9a954|f1b01b64c9abe422f560f51ee7ca03212477b0af
 
 # Camera (lemonades)
-odm/etc/camera/ashdr/ncf_pack.ncf
-odm/etc/camera/ashdr/ncf_pack_imx471.ncf
-odm/etc/camera/ashdr/ncf_pack_imx481.ncf
-odm/etc/camera/ashdr/ncf_pack_imx586.ncf
-odm/etc/camera/darksight/darksight_main.bin
-odm/etc/camera/darksight/darksight_ultrawide.bin
-odm/etc/camera/calibrationOutput_uw.bin
-odm/etc/camera/distortion_result.bin
-odm/lib64/camera/components/com.oneplus.node.cfrsnapshot.so
-odm/lib64/camera/components/com.oneplus.node.cfrvideo.so
-odm/lib64/camera/com.qti.sensormodule.holitech_gc02m1b.bin
-odm/lib64/camera/com.qti.sensormodule.qtech_imx481.bin
-odm/lib64/camera/com.qti.sensormodule.semco_imx586.bin
-odm/lib64/camera/com.qti.sensormodule.shine_gc5035.bin
-odm/lib64/camera/com.qti.sensormodule.truly_imx471.bin
-odm/lib64/camera/com.qti.tuned.holitech_gc02m1b.bin
-odm/lib64/camera/com.qti.tuned.qtech_imx481.bin
-odm/lib64/camera/com.qti.tuned.semco_imx586.bin
-odm/lib64/camera/com.qti.tuned.shine_gc5035.bin
-odm/lib64/camera/com.qti.tuned.truly_imx471.bin
-odm/lib64/camera/com.qti_lemonades.sensor.gc02m1b.so
-odm/lib64/camera/com.qti_lemonades.sensor.gc5035.so
-odm/lib64/camera/com.qti_lemonades.sensor.imx471.so
-odm/lib64/camera/com.qti_lemonades.sensor.imx481.so
-odm/lib64/camera/com.qti_lemonades.sensor.imx586.so
+odm/etc/camera/ashdr/ncf_pack.ncf:odm/9r/etc/camera/ashdr/ncf_pack.ncf
+odm/etc/camera/ashdr/ncf_pack_imx471.ncf:odm/9r/etc/camera/ashdr/ncf_pack_imx471.ncf
+odm/etc/camera/ashdr/ncf_pack_imx481.ncf:odm/9r/etc/camera/ashdr/ncf_pack_imx481.ncf
+odm/etc/camera/ashdr/ncf_pack_imx586.ncf:odm/9r/etc/camera/ashdr/ncf_pack_imx586.ncf
+odm/etc/camera/darksight/darksight_main.bin:odm/9r/etc/camera/darksight/darksight_main.bin
+odm/etc/camera/darksight/darksight_ultrawide.bin:odm/9r/etc/camera/darksight/darksight_ultrawide.bin
+odm/etc/camera/calibrationOutput_uw.bin:odm/9r/etc/camera/calibrationOutput_uw.bin
+odm/etc/camera/distortion_result.bin:odm/9r/etc/camera/distortion_result.bin
+odm/lib64/camera/components/com.oneplus.node.cfrsnapshot.so:odm/9r/lib64/camera/components/com.oneplus.node.cfrsnapshot.so
+odm/lib64/camera/components/com.oneplus.node.cfrvideo.so:odm/9r/lib64/camera/components/com.oneplus.node.cfrvideo.so
+odm/lib64/camera/com.qti.sensormodule.holitech_gc02m1b.bin:odm/9r/lib64/camera/com.qti.sensormodule.holitech_gc02m1b.bin
+odm/lib64/camera/com.qti.sensormodule.qtech_imx481.bin:odm/9r/lib64/camera/com.qti.sensormodule.qtech_imx481.bin
+odm/lib64/camera/com.qti.sensormodule.semco_imx586.bin:odm/9r/lib64/camera/com.qti.sensormodule.semco_imx586.bin
+odm/lib64/camera/com.qti.sensormodule.shine_gc5035.bin:odm/9r/lib64/camera/com.qti.sensormodule.shine_gc5035.bin
+odm/lib64/camera/com.qti.sensormodule.truly_imx471.bin:odm/9r/lib64/camera/com.qti.sensormodule.truly_imx471.bin
+odm/lib64/camera/com.qti.tuned.holitech_gc02m1b.bin:odm/9r/lib64/camera/com.qti.tuned.holitech_gc02m1b.bin
+odm/lib64/camera/com.qti.tuned.qtech_imx481.bin:odm/9r/lib64/camera/com.qti.tuned.qtech_imx481.bin
+odm/lib64/camera/com.qti.tuned.semco_imx586.bin:odm/9r/lib64/camera/com.qti.tuned.semco_imx586.bin
+odm/lib64/camera/com.qti.tuned.shine_gc5035.bin:odm/9r/lib64/camera/com.qti.tuned.shine_gc5035.bin
+odm/lib64/camera/com.qti.tuned.truly_imx471.bin:odm/9r/lib64/camera/com.qti.tuned.truly_imx471.bin
+odm/lib64/camera/com.qti_lemonades.sensor.gc02m1b.so:odm/9r/lib64/camera/com.qti_lemonades.sensor.gc02m1b.so
+odm/lib64/camera/com.qti_lemonades.sensor.gc5035.so:odm/9r/lib64/camera/com.qti_lemonades.sensor.gc5035.so
+odm/lib64/camera/com.qti_lemonades.sensor.imx471.so:odm/9r/lib64/camera/com.qti_lemonades.sensor.imx471.so
+odm/lib64/camera/com.qti_lemonades.sensor.imx481.so:odm/9r/lib64/camera/com.qti_lemonades.sensor.imx481.so
+odm/lib64/camera/com.qti_lemonades.sensor.imx586.so:odm/9r/lib64/camera/com.qti_lemonades.sensor.imx586.so
 
 # Camera firmware
 vendor/firmware/CAMERA_ICP.elf
