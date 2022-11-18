@@ -44,6 +44,7 @@
     <application
         android:icon="@drawable/ic_settings_device"
         android:label="@string/device_title"
+        android:persistent="true"
         android:theme="@style/Theme.SubSettingsBase"
         android:defaultToDeviceProtectedStorage="true"
         android:directBootAware="true">
