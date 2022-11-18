@@ -25,6 +25,7 @@ import android.content.pm.PackageManager.ResolveInfoFlags
 import android.media.AudioManager
 import android.media.session.MediaSessionLegacyHelper
 import android.net.Uri
+import android.os.Binder
 import android.os.PowerManager
 import android.os.RemoteException
 import android.os.ServiceManager
@@ -72,6 +73,7 @@ class TouchScreenGestureHandler : LifecycleService() {
     }
 
     private val eventChannel = Channel<KeyEvent>(capacity = Channel.CONFLATED)
+    private val token = Binder()
     private val keyHandler = object : IKeyHandler.Stub() {
         override fun handleKeyEvent(keyEvent: KeyEvent) {
             lifecycleScope.launch {
@@ -108,7 +110,12 @@ class TouchScreenGestureHandler : LifecycleService() {
 
     private suspend fun registerKeyHandler() {
         try {
-            getDeviceKeyManager()?.registerKeyHandler(keyHandler, ScanCodes, Actions)
+            getDeviceKeyManager()?.let {
+                it.registerKeyHandler(token, keyHandler, ScanCodes, Actions, -1)
+            } ?: run {
+                stopSelf()
+                return
+            }
             handleKeyEvents()
         } catch(e: RemoteException) {
             Log.e(TAG, "Failed to register key handler", e)
@@ -118,7 +125,7 @@ class TouchScreenGestureHandler : LifecycleService() {
 
     private fun unregisterKeyHandler() {
         try {
-            getDeviceKeyManager()?.unregisterKeyHandler(keyHandler)
+            getDeviceKeyManager()?.unregisterKeyHandler(token)
         } catch(e: RemoteException) {
             Log.e(TAG, "Failed to register key handler", e)
         }
