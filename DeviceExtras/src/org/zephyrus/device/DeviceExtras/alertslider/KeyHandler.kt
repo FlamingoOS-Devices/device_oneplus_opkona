@@ -26,6 +26,7 @@ import android.content.IntentFilter
 import android.content.res.Configuration
 import android.media.AudioManager
 import android.media.AudioSystem
+import android.os.Binder
 import android.os.RemoteException
 import android.os.ServiceManager
 import android.os.UEventObserver
@@ -76,6 +77,7 @@ class KeyHandler : LifecycleService() {
     }
     
     private val positionChangeChannel = Channel<AlertSliderPosition>(capacity = Channel.CONFLATED)
+    private val token = Binder()
     private val keyHandler = object : IKeyHandler.Stub() {
         override fun handleKeyEvent(keyEvent: KeyEvent) {
             lifecycleScope.launch {
@@ -122,7 +124,12 @@ class KeyHandler : LifecycleService() {
 
     private suspend fun registerKeyHandler() {
         try {
-            getDeviceKeyManager()?.registerKeyHandler(keyHandler, ScanCodes, Actions)
+            getDeviceKeyManager()?.let {
+                it.registerKeyHandler(token, keyHandler, ScanCodes, Actions, -1)
+            } ?: run {
+                stopSelf()
+                return
+            }
         } catch(e: RemoteException) {
             Log.e(TAG, "Failed to register key handler", e)
             stopSelf()
@@ -131,7 +138,7 @@ class KeyHandler : LifecycleService() {
     
     private fun unregisterKeyHandler() {
         try {
-            getDeviceKeyManager()?.unregisterKeyHandler(keyHandler)
+            getDeviceKeyManager()?.unregisterKeyHandler(token)
         } catch(e: RemoteException) {
             Log.e(TAG, "Failed to register key handler", e)
         }
