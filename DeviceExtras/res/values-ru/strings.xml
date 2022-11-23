@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2014-2016 The OmniROM Project
+     Copyright (C) 2021 The Evolution X Project
+     Copyright (C) 2018 The Xiaomi-SDM660 Project
+     Copyright (C) 2018-2021 crDroid Android Project
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<resources>
+    <!-- Device Extras -->
+    <string name="device_title">Дополнительные возможности устройства</string>
+    <string name="device_summary">Настройка специальных настроек устройства</string>
+    
+    <!-- AlertSlider -->
+    <string name="alert_slider">Слайдер оповещения</string>
+    <string name="alert_slider_summary">Настройка аудиорежимов для различных положений</string>
+    <string name="alert_slider_bottom_title">Нижнее положение</string>
+    <string name="alert_slider_middle_title">Среднее положение</string>
+    <string name="alert_slider_top_title">Верхнее положение</string>
+    <string name="mode_normal">Звонок</string>
+    <string name="mode_priority">Приоритет</string>
+    <string name="mode_vibrate">Вибрация</string>
+    <string name="mode_silent">Бесшумный</string>
+    <string name="mode_dnd">Полная тишина</string>
+    <string name="alert_slider_mute_media_title">Заглушить медиа</string>
+    <string name="alert_slider_mute_media_summary">Отключать звук мультимедиа при переключении в беззвучный режим</string>
+
+    <!-- Display -->
+    <string name="display_title">Экран</string>
+    <string name="dc_mode_title">DC-dimming</string>
+    <string name="dc_mode_summary">Приглушение подсветки за счет снижения потребления постоянного тока</string>
+    <string name="hbm_mode_title">Режим высокой яркости</string>
+    <string name="hbm_mode_summary">Включить пиковую яркость</string>
+    <string name="hbm_mode_warning">Длительное использование режима высокой яркости может привести к повреждению дисплея</string>
+    <string name="auto_hbm_title">Автоматический режим повышенной яркости</string>
+    <string name="auto_hbm_summary">Включение пиковой яркости на основе солнечного света</string>
+    <string name="auto_hbm_threshold_title"></string>
+    <string name="auto_hbm_threshold_summary">порог (люкс)</string>
+
+     <!-- FPS Info -->
+    <string name="fps_title">Измеренный FPS</string>
+    <string name="fps_info_title">Наложение FPS</string>
+    <string name="fps_info_summary">Показать наложение с текущей частотой кадров в секунду</string>
+    <string name="fps_info_color_title">Цвет текста</string>
+    <string name="fps_info_color_green">Зеленый</string>
+    <string name="fps_info_color_red">Красный</string>
+    <string name="fps_info_color_blue">Синий</string>
+    <string name="fps_info_color_yellow">Желтый</string>
+    <string name="fps_info_color_black">Черный</string>
+    <string name="fps_info_color_accent">Следовать системе</string>
+    <string name="fps_info_position_title">Позиция наложения</string>
+    <string name="fps_info_position_top_left">Слева вверху</string>
+    <string name="fps_info_position_top_center">По центру сверху</string>
+    <string name="fps_info_position_top_right">Справа сверху</string>
+    <string name="fps_info_position_bottom_left">Слева внизу</string>
+    <string name="fps_info_position_bottom_center">По центру внизу</string>
+    <string name="fps_info_position_bottom_right">Справа снизу</string>
+    <string name="fps_info_text_size_title">Размер текста</string>
+    
+    <!-- GPU -->
+    <string name="gpu_title">GPU</string>
+    <string name="adrenoboost_title">Adrenoboost</string>
+    <string name="adrenoboost_summary">Выключен, легкий, средний, агрессивный</string>
+
+    <!-- Doze -->
+    <string name="ambient_enable">Использовать активный экран</string>
+    <string name="ambient_display_title">Активный экран</string>
+    <string name="ambient_display_enable_title">Активный экран</string>
+    <string name="ambient_display_enable_summary">Пробуждение экрана при получении уведомлений</string>
+    <string name="ambient_display_gestures_title">Жесты активного экрана</string>
+    <string name="ambient_display_gestures_summary">Дополнительные жесты для пробуждения экрана</string>
+    <string name="ambient_display_summary">Пробуждение экрана при получении уведомлений</string>
+    <string name="ambient_display_always_on_title">Всегда включен</string>
+    <string name="dialog_ok">OK</string>
+    <string name="disabled">Отключен</string>
+    <string name="doze_panel_title">Doze</string>
+    <string name="doze_settings_help_text">Эти функции используют события датчиков для запуска импульса уведомления о дремоте. Выбранный датчик включается только тогда, когда устройство получает уведомление, что помогает снизить расход заряда батареи. Также есть возможность включить выбранный датчик, как только экран выключится, это приведет к увеличению расхода батареи.</string>
+    <string name="doze_settings_help_title">Помощь</string>
+    <string name="pickup_sensor_title">Датчик подъема</string>
+    <string name="pick_up_gesture_title">Подъем</string>
+    <string name="pick_up_gesture_summary">Импульсные уведомления при взятии</string>
+    <string name="pick_up_wake_gesture_summary">Пробуждение устройства при поднятии</string>
+    <string name="pocket_gesture_title">Карман</string>
+    <string name="pocket_gesture_summary">Импульсные уведомления при извлечении из кармана</string>
+    <string name="proximity_sensor_title">Датчик приближения</string>
+    <string name="ambient_display_always_on_summary">Отображение времени, значков уведомлений и другой информации. Повышенное использование батареи.</string>
+    <string name="switch_bar_off">Выкл</string>
+    <string name="switch_bar_on">Вкл</string>
+
+    <!-- Touchscreen -->
+    <string name="touchscreen_title">Сенсорный экран</string>
+    <string name="game_mode_title">Игровой режим</string>
+    <string name="game_mode_summary">Принудительное включение частоты опроса свыше 240 Гц для всех приложений</string>
+    <string name="game_mode_warning">Может сократить время работы от аккумулятора</string>
+
+    <!-- Vibrator -->
+    <string name="category_vibrator">Вибратор</string>
+    <string name="vib_strength_title">Сила системы</string>
+    <string name="vib_strength_summary">Определите интенсивность вибрации</string>
+
+    <!-- Touchscreen Gestures -->
+    <string name="touchscreen_gesture_settings_title">Жесты сенсорного экрана</string>
+    <string name="touchscreen_gesture_settings_summary">Выполняйте различные жесты на сенсорном экране для быстрых действий</string>
+    <string name="touchscreen_gesture_haptic_feedback_title">Тактильная отдача</string>
+    <string name="touchscreen_gesture_haptic_feedback_summary">Вибрация при обнаружении жеста на сенсорном экране</string>
+
+    <!-- Screen off Gestures : Input -->
+    <string name="touchscreen_gesture_single_tap_title">Одиночное нажатие</string>
+    <string name="touchscreen_gesture_two_fingers_down_swipe_title">Проведите вниз двумя пальцами</string>
+    <string name="touchscreen_gesture_down_arrow_title">Нарисуйте \"V\"</string>
+    <string name="touchscreen_gesture_right_arrow_title">Нарисуйте \"&gt;\"</string>
+    <string name="touchscreen_gesture_left_arrow_title">Нарисуйте \"&lt;\"</string>
+    <string name="touchscreen_gesture_letter_o_title">Нарисуйте букву \"O\"</string>
+    <string name="touchscreen_gesture_letter_m_title">Нарисуйте букву \"M\"</string>
+    <string name="touchscreen_gesture_letter_s_title">Нарисуйте букву \"S\"</string>
+    <string name="touchscreen_gesture_letter_w_title">Нарисуйте букву \"W\"</string>
+    <string name="touchscreen_gesture_swipe_up_title">Проведение пальцем вверх</string>
+    <string name="touchscreen_gesture_swipe_down_title">Проведение пальцем вниз</string>
+    <string name="touchscreen_gesture_swipe_left_title">Проведение пальцем влево</string>
+    <string name="touchscreen_gesture_swipe_right_title">Проведение пальцем вправо</string>
+
+    <!-- Screen off Gestures : Actions -->
+    <string name="touchscreen_gesture_action_dialog_title">Действие жеста</string>
+    <string name="touchscreen_gesture_action_do_nothing">Ничего не делать</string>
+    <string name="touchscreen_gesture_action_flashlight">Включить фонарик</string>
+    <string name="touchscreen_gesture_action_camera">Открыть камеру</string>
+    <string name="touchscreen_gesture_action_browser">Откройте браузер</string>
+    <string name="touchscreen_gesture_action_dialer">Открыть набор номера</string>
+    <string name="touchscreen_gesture_action_email">Просмотр электронной почты</string>
+    <string name="touchscreen_gesture_action_messages">Просмотр сообщений</string>
+    <string name="touchscreen_gesture_action_play_pause_music">Воспроизведение/пауза музыки</string>
+    <string name="touchscreen_gesture_action_previous_track">Воспроизведение предыдущей музыкальной дорожки</string>
+    <string name="touchscreen_gesture_action_next_track">Воспроизведение следующего музыкального трека</string>
+    <string name="touchscreen_gesture_action_volume_down">Уменьшение громкости медиа</string>
+    <string name="touchscreen_gesture_action_volume_up">Увеличение громкости медиа</string>
+    <string name="touchscreen_gesture_action_wakeup">Пробуждение устройства</string>
+    <string name="touchscreen_gesture_action_ambient_display">Показать активный экран</string>
+    
+    <!-- USB -->
+    <string name="usb_title">USB</string>
+    <string name="otg_mode_title">USB-OTG</string>
+    <string name="otg_mode_summary">Включить режим USB "на ходу"</string>
+</resources>
