@@ -414,10 +414,10 @@ int LedVibratorDevice::on(int32_t timeoutMs) {
         ret |= write_value(LED_DEVICE "/brightness", "1");
         ret |= write_value(LED_DEVICE "/rtp", "0");
     } else {
-        ret |= write_value(LED_DEVICE "/waveform_index", 7);
         ret |= write_value(LED_DEVICE "/duration", timeoutMs);
+        ret |= write_value(LED_DEVICE "/waveform_index", "3"); 
         ret |= write_value(LED_DEVICE "/vmax", "0x16");
-        ret |= write_value(LED_DEVICE "/state", "1");
+        ret |= write_value(LED_DEVICE "/gain", "0x60");
         ret |= write_value(LED_DEVICE "/activate", "1");
         ret |= write_value(LED_DEVICE "/activate", "0");
     }
