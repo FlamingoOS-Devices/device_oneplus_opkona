@@ -30,4 +30,6 @@ PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
 PRODUCT_MODEL := kona
 
+GAPPS_BUILD := true
+
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
