@@ -402,6 +402,7 @@ PRODUCT_PACKAGES += \
     AlertSliderOverlay \
     OnePlus9RWifiOverlay \
     OplusBrightnessOverlay \
+    OplusCarrierConfigOverlay \
     SettingsOverlayRefreshRate \
     OplusColorModes \
     OplusSettingsColorModes \
