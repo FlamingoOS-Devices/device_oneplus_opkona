@@ -23,7 +23,7 @@
     <dimen name="status_bar_padding_end">24px</dimen>
 
     <!-- the padding on the top of the statusbar (usually 0) -->
-    <dimen name="status_bar_padding_top">32px</dimen>
+    <dimen name="status_bar_padding_top">35px</dimen>
 
     <!-- Height of the status bar header bar when on Keyguard -->
     <dimen name="status_bar_header_height_keyguard">@*android:dimen/status_bar_height</dimen>
@@ -37,7 +37,7 @@
     <!-- Starting padding for a left-aligned status bar clock -->
     <dimen name="status_bar_left_clock_starting_padding">@dimen/status_bar_padding_start</dimen>
     
-    <dimen name="qs_header_row_min_height">140px</dimen>
+    <dimen name="qs_header_row_min_height">143px</dimen>
     
     <!-- Location on the screen of the center of the Physical Power Button. -->
     <dimen name="physical_power_button_center_screen_location_y">900px</dimen>
