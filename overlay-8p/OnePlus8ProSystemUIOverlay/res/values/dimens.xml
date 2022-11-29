@@ -17,12 +17,11 @@
 -->
 <resources>
 
-    <dimen name="qs_header_row_min_height">141px</dimen>
+    <dimen name="qs_header_row_min_height">172px</dimen>
     
     <!-- The Enrollment Progress bar for UDFPS sensor in pixels -->
     <integer name="config_udfpsEnrollProgressBar" translatable="false">120</integer>
     
     <!-- Location on the screen of the center of the Physical Power Button. -->
     <dimen name="physical_power_button_center_screen_location_y">1212px</dimen>
-    
 </resources>

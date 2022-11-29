@@ -52,5 +52,8 @@
         <item>2549</item> <!-- <item>sensorLocationY</item> -->
         <item>125</item>  <!-- <item>sensorRadius</item> -->
     </integer-array>
+    
+    <!-- Whether the device supports wireless charging or not -->
+    <bool name="config_deviceSupportsWirelessCharging">true</bool>
 
 </resources>
