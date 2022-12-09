@@ -33,6 +33,10 @@
     <string name="mode_dnd">Total Silence</string>
     <string name="alert_slider_mute_media_title">Mute media</string>
     <string name="alert_slider_mute_media_summary">Mute media when switching to silent</string>
+    <string name="alert_slider_dialog_title">Show dialog</string>
+    <string name="alert_slider_dialog_summary">Show dialog when changing Alert Slider modes</string>
+    <string name="alert_slider_pulse_title">Pulse on change</string>
+    <string name="alert_slider_pulse_summary">Pulse ambient display when changing Alert Slider modes</string>
 
     <!-- Display -->
     <string name="display_title">Display</string>

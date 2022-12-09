@@ -161,6 +161,18 @@ class KeyHandler : LifecycleService() {
         vibrate: Boolean = true,
         showDialog: Boolean = true
     ) {
+        val showDialogSetting = Settings.System.getIntForUser(
+            contentResolver,
+            SHOW_SLIDER_DIALOG,
+            1,
+            UserHandle.USER_CURRENT
+        ) == 1
+        val pulseSliderSetting = Settings.System.getIntForUser(
+            contentResolver,
+            PULSE_SLIDER,
+            0,
+            UserHandle.USER_CURRENT
+        ) == 1
         val savedMode = Settings.System.getStringForUser(
             contentResolver,
             sliderPosition.modeKey,
@@ -173,7 +185,12 @@ class KeyHandler : LifecycleService() {
             return
         }
         performSliderAction(mode, vibrate)
-        if (showDialog) updateDialogAndShow(mode, sliderPosition)
+        if (showDialog && showDialogSetting) {
+            updateDialogAndShow(mode, sliderPosition)
+            if (pulseSliderSetting) {
+                pulseSlider() 
+            }
+        }
     }
 
     private fun performSliderAction(mode: Mode, vibrate: Boolean) {
@@ -223,6 +240,18 @@ class KeyHandler : LifecycleService() {
         }
     }
 
+    private fun pulseSlider() {
+        val dozeEnabled = Settings.Secure.getIntForUser(
+            contentResolver,
+            Settings.Secure.DOZE_ENABLED,
+            1,
+            UserHandle.USER_CURRENT
+        ) == 1
+        if (dozeEnabled) {
+            sendBroadcastAsUser(Intent(PULSE_ACTION), UserHandle.SYSTEM)
+        }
+    }
+
     private fun performHapticFeedback(effect: VibrationEffect) {
         if (vibrator.hasVibrator()) vibrator.vibrate(effect)
     }
@@ -255,5 +284,11 @@ class KeyHandler : LifecycleService() {
                 VibrationEffect.createPredefined(VibrationEffect.EFFECT_DOUBLE_CLICK)
 
         private const val MUTE_MEDIA_WITH_SILENT = "config_mute_media"
+
+        private const val SHOW_SLIDER_DIALOG = "show_slider_dialog"
+
+        private const val PULSE_SLIDER = "pulse_slider"
+
+        private const val PULSE_ACTION = "com.android.systemui.doze.pulse"
     }
 }

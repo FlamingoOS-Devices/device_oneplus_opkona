@@ -23,4 +23,19 @@
         android:summary="@string/alert_slider_mute_media_summary"
         android:defaultValue="0"
         android:order="1000" />
+
+    <com.flamingo.support.preference.SystemSettingSwitchPreference
+        android:key="show_slider_dialog"
+        android:title="@string/alert_slider_dialog_title"
+        android:summary="@string/alert_slider_dialog_summary"
+        android:defaultValue="1"
+        android:order="1001" />
+
+    <com.flamingo.support.preference.SystemSettingSwitchPreference
+        android:key="pulse_slider"
+        android:title="@string/alert_slider_pulse_title"
+        android:summary="@string/alert_slider_pulse_summary"
+        android:defaultValue="0"
+        android:order="1002"
+        android:dependency="show_slider_dialog" />
 </PreferenceScreen>

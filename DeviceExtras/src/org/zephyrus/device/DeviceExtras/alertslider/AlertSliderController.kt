@@ -17,10 +17,13 @@
 package org.zephyrus.device.DeviceExtras.alertslider
 
 import android.content.Context
+import android.content.ContentResolver
 import android.content.res.Configuration
 import android.os.Handler
 import android.os.Looper
 import android.os.PowerManager
+import android.os.UserHandle
+import android.provider.Settings
 
 private const val TIMEOUT = 1000L
 
@@ -28,6 +31,7 @@ class AlertSliderController(context: Context) {
 
     private val handler = Handler(Looper.getMainLooper())
     private val powerManager = context.getSystemService(PowerManager::class.java)
+    private val contentResolver = context.getContentResolver()
 
     private val dialog = AlertSliderDialog(context)
     private val dismissDialogRunnable = Runnable { dialog.dismiss() }
@@ -42,8 +46,14 @@ class AlertSliderController(context: Context) {
     }
 
     fun showDialog(position: AlertSliderPosition) {
+        val pulseSliderSetting = Settings.System.getIntForUser(
+        contentResolver,
+        PULSE_SLIDER,
+        0,
+        UserHandle.USER_CURRENT
+        ) == 1
         removeHandlerCalbacks()
-        if (powerManager.isInteractive) {
+        if (powerManager.isInteractive || pulseSliderSetting) {
             dialog.show(position)
             handler.postDelayed(dismissDialogRunnable, TIMEOUT)
         }
@@ -53,5 +63,11 @@ class AlertSliderController(context: Context) {
         if (handler.hasCallbacks(dismissDialogRunnable)) {
             handler.removeCallbacks(dismissDialogRunnable)
         }
+    }
+
+    companion object {
+        private const val TAG = "AlertSliderController"
+
+        private const val PULSE_SLIDER = "pulse_slider"
     }
 }
