@@ -92,8 +92,7 @@ function blob_fixup() {
             sed -i "s/^NXP_RF_CONF_BLK_10/#NXP_RF_CONF_BLK_10/" "${2}"
             ;;
         vendor/lib64/hw/com.qti.chi.override.so)
-            "${SIGSCAN}" -p "EF 2A 04 94" -P "1F 20 03 D5" -f "${2}"
-            "${SIGSCAN}" -p "9A 22 04 94" -P "1F 20 03 D5" -f "${2}"
+            grep -q libcamera_metadata_shim.so "${2}" || "${PATCHELF}" --add-needed libcamera_metadata_shim.so "${2}"
             sed -i "s/com.oem.autotest/\x00om.oem.autotest/" "${2}"
             ;;
         vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so)
