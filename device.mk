@@ -323,6 +323,11 @@ PRODUCT_PACKAGES += \
     libcodec2_soft_vp8dec \
     libcodec2_soft_vp9enc \
     libcodec2_soft_vp8enc
+    
+# Prefer codec2.0 codecs
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.stagefright.ccodec=4 \
+    debug.stagefright.omx_default_rank=0
 
 # Net
 PRODUCT_PACKAGES += \
