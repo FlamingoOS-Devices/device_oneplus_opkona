@@ -18,7 +18,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from sm8250 device
+# Inherit from opkona device
 $(call inherit-product, device/oneplus/opkona/device.mk)
 
 # Inherit from the Flamingo configuration.
@@ -29,7 +29,5 @@ PRODUCT_DEVICE := opkona
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
 PRODUCT_MODEL := kona
-
-GAPPS_BUILD := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
