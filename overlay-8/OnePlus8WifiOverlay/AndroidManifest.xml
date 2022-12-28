@@ -8,7 +8,7 @@
     package="com.android.wifi.resources.overlay.oneplus8">
     <overlay
         android:isStatic="true"
-        android:priority="715"
+        android:priority="2015"
         android:requiredSystemPropertyName="ro.overlay.device"
         android:requiredSystemPropertyValue="instantnoodle"
         android:targetName="WifiCustomization"
